@@ -129,10 +129,9 @@ public class Capture {
 		TreeMap<Integer, ArrayList<Integer>> yMap = new TreeMap<Integer, ArrayList<Integer>>();
 		TreeMap<Pair, Integer> ptMap = new TreeMap<Pair, Integer>();
 		for (int i = 0; i < w; i++) {
-			for (int j = h / 4; j < h; j++) {
+			for (int j = 0; j < h; j++) {
 				if (vis[i][j]) continue;
 				int first = image.getRGB(i, j)&0xffffff;
-
 				if (first != backColor) {
 					int size = 0;
 					Queue<Pair> q = new LinkedList<Pair>();
