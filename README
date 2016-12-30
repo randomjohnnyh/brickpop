@@ -2,7 +2,7 @@ Solver for Facebook game Brick Pop
 
 Takes screenshot via Robot, solves puzzle (maximizing score) via beam search, and performs moves via Java's Robot.
 
-Heuristic for beam search takes into account potential future point, immediately available points, number of components, and number of singletons. Terminates if only one of a color remains or if maximum potential score is below already found solution.
+Heuristic for beam search takes into account potential future points, immediately available points, number of components, and number of singletons. Terminates if only one of a color remains or if maximum potential score is below already found solution.
 
 I have not encountered any unsolved grids, and the algorithm usually scores 2000-3000 on three colors, up to 800-1000 on six colors.
 
