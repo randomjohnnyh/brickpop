@@ -1,0 +1,5 @@
+Solver for Facebook game Brick Pop
+
+Takes screenshot via Robot, solves via beam search, and performs moves via Java's Robot.
+
+Heuristic for beam search takes into account potential future point, immediately available points, number of components, and number of singletons. Terminates if only one of a color remains or if maximum potential score is below already found solution.
