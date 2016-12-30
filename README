@@ -1,5 +1,11 @@
 Solver for Facebook game Brick Pop
 
-Takes screenshot via Robot, solves via beam search, and performs moves via Java's Robot.
+Takes screenshot via Robot, solves puzzle (maximizing score) via beam search, and performs moves via Java's Robot.
 
 Heuristic for beam search takes into account potential future point, immediately available points, number of components, and number of singletons. Terminates if only one of a color remains or if maximum potential score is below already found solution.
+
+I have not encountered any unsolved grids, and the algorithm usually scores 2000-3000 on three colors, up to 800-1000 on six colors.
+
+The ad-hoc algorithm for finding the grid and reading the input only requires hardcoding the background color. The bricks on the grid are found via flood fill, and the colors are distinguished via the color of the center pixel. The grid is distinguished from other objects/letters by examining the periodicity of the coordinates. Some leeway is required since the grid is not pixel-perfect on desktop due to scaling and anti-aliasing.
+
+Some sleep time between moves is necessary due to the animations of the game.
